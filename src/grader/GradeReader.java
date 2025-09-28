@@ -18,32 +18,31 @@ public class GradeReader{
     // A function that reads an array of strings
     public Assignment[] readInput(String[] input){
         // Variables
-        int index = 0; // A variable to keep track of the index for the input array
+        int index = LINESKIP; // A variable to keep track of the index for the input array
         int assignmentIndex = 0; // The index for the assignents array
         String currentString; // A variable to store the current string
         Assignment[] assignments = new Assignment[ARRAYSIZE]; // An array to hold all the assignments found in the string array
+        String assignmentName = "";
+        String assignmentScore = "";
+        boolean gotAssignmentName = false;
+        while (index< input.length){
+            if(index==26){
+                assignmentName = input[index+1];
+                gotAssignmentName = true
+            }
+            if(gotAssignmentName == true){
+                for(int i = index; i< input.length;i++){
+                    if(input[i].contains())
+                }
+            }
+
+        }
+
+
+
 
         // Reads the file
         while (index < input.length){
-            currentString = input[index]; // Gets what the current string is
-
-            // Determines what special keyword currentString is
-            if (currentString.equals(STARTOFPAGE)) { // Skips the uncessary header information of the input array
-                index += LINESKIP;
-            } // End of if
-
-            else if (currentString.equals(FIRSTPAGELINE)) { // Skips over an uncessary header line that is only on the first instance of uncessary header information
-                index += 1;
-            } // End of else if
-
-            else if (currentString.equals(PAGE)) { // Skips over the page information at the end of the blackboard page
-                index += PAGESKIP;
-            } // End of else if
-
-            else { // Adds an assignment to the array, then increments the assignmentIndex
-                index = getAssignment(input, assignments, currentString, index, assignmentIndex);
-                assignmentIndex += 1;
-            } // End of else
 
         } // End of while loop
         return assignments;

@@ -9,6 +9,15 @@ public class Assignment{
     private String title; // Stores the title of an assignment
     private String type; // Stores what type the assignment is(eg. Homework, Quiz, Exam, etc.)
 
+    public Assignment(){
+        this.grade = 1;
+        this.title = "unnamed";
+    }
+
+    public Assignment(String title, double grade){
+        this.grade = grade;
+        this.title = title;
+    }
     // The getter functions for each variable
     public double getGrade() {
         return grade;
