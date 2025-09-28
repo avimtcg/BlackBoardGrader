@@ -1,6 +1,4 @@
-/*
-Author: Trey
- */
+
 
 package grader;
 
@@ -9,10 +7,15 @@ public class GradeCalculator {
     public double calculate(String[] scores, String[] weights) {
         double total = 0, totalWeight = 0;
         for (int i = 0; i < scores.length; i++) {
-            double score = parse(scores[i]);
-            double weight = parse(weights[i]);
-            total += score * weight;
-            totalWeight += weight;
+            if(parse(scores[i]) != -1) {
+                double score = parse(scores[i]);
+                double weight = parse(weights[i]);
+                total += score * weight;
+                totalWeight += weight;
+            }
+            else{
+                continue;
+            }
         }
         return total / totalWeight * 100;
     }

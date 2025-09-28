@@ -83,6 +83,9 @@ public class userInputFormPart4 extends JFrame{
             this.dispose();
         });
 
+        panel.add(Box.createVerticalStrut(10));
+        panel.add(nextButton);
+
         JScrollPane scrollPane = new JScrollPane(panel);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
