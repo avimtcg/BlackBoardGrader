@@ -1,7 +1,7 @@
-package grader;
 // Author: William Bowman
 // Date: 9/27/2025
 // Description: An object that stores information about an assignment. It will store the grade, title, and type
+package grader;
 
 public class Assignment{
     // Variables
