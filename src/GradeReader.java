@@ -12,7 +12,7 @@ public class GradeReader{
     final String FIRSTPAGELINE = "gradebook.table.unreadIndicator.header"; // A string that the first page has that must be skipped
     final int LINESKIP = 26; // The amount of elements that are skipped over at the top of a page.
     final int PAGESKIP = 4; // The amount of elements that are skipped over at the bottom of a page
-    final int ARRAYSIZE = 50; // The amount of Assignments that can fit into the array
+    final int ARRAYSIZE = 25; // The amount of Assignments that can fit into the array
 
     // A function that reads an array of strings
     public Assignment[] readInput(String[] input){
