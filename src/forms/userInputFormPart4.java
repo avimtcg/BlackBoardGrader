@@ -74,9 +74,26 @@ public class userInputFormPart4 extends JFrame{
             typeFields.add(typeCombo);
         }
 
+        JButton nextButton = new JButton("Next");
+        nextButton.addActionListener(e -> {
+            AssignmentData.assignTypes = new ArrayList<>(typeFields);
+            new userInputFormPart5();
+            this.dispose();
+        });
+
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+        int rowHeight = 40;
+        int visibleRows = 5;
+        scrollPane.setPreferredSize(new Dimension(400, rowHeight * visibleRows));
+
+
         setContentPane(panel);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
+
+
     }
 }
