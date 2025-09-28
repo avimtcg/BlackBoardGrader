@@ -5,6 +5,7 @@ Author: Trey
 package grader;
 
 public class GradeCalculator {
+
     public double calculate(String[] scores, String[] weights) {
         double total = 0, totalWeight = 0;
         for (int i = 0; i < scores.length; i++) {

@@ -8,6 +8,7 @@ public class Assignment{
     private double grade; // Stores the percent grade of an assignment
     private String title; // Stores the title of an assignment
     private String type; // Stores what type the assignment is(eg. Homework, Quiz, Exam, etc.)
+    private double weight;
 
     // The getter functions for each variable
     public double getGrade() {
@@ -34,4 +35,12 @@ public class Assignment{
     public void setType(String type) {
         this.type = type;
     } // End of setType(String)
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 } // End of Assignment

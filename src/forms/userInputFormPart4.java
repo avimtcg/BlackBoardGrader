@@ -41,6 +41,8 @@ public class userInputFormPart4 extends JFrame{
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        AssignmentData.assignments = new Assignment[numAssignments];
+        AssignmentData.assignments = assignmentArr;
 
 
         for(int i = 0;i<nameFields.size();i++){

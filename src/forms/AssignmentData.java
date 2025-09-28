@@ -1,5 +1,7 @@
 package forms;
 
+import grader.Assignment;
+
 import javax.swing.*;
 import java.util.List;
 
@@ -7,4 +9,5 @@ public class AssignmentData {
     public static List<JTextField> nameFields;
     public static List<JTextField> percentFields;
     public static List<JComboBox> assignTypes;
+    public static Assignment[] assignments;
 }
