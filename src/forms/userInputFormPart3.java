@@ -28,7 +28,7 @@ public class userInputFormPart3 extends JFrame{
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         imagePanel.setLayout(new BoxLayout(imagePanel, BoxLayout.Y_AXIS));
 
-        String[] images = {"/images/image1.png", "/images/image2.png", "/images/image1.png"};
+        String[] images = {"/images/FirstStep_Instruction.png", "/images/SecondStep_Instruction.png", "/images/ThirdStep_Instruction.png"};
 
 
 
