@@ -38,13 +38,15 @@ public class userInputFormPart2 extends JFrame {
             panel.add(row);
             panel.add(Box.createVerticalStrut(5));
 
-            nameFields.add(nameField);
-            percentFields.add(percentField);
+            this.nameFields.add(nameField);
+            this.percentFields.add(percentField);
         }
 
         JButton nextButton = new JButton("Next");
         nextButton.addActionListener(e -> {
-            new userInputFormPart3(nameFields, percentFields);
+            AssignmentData.nameFields = this.nameFields;
+            AssignmentData.percentFields = this.percentFields;
+            new userInputFormPart3();
             this.dispose();
         });
 

@@ -12,15 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class userInputFormPart3 extends JFrame{
-    private List<JTextField> nameFields = new ArrayList<>();
-    private List<JTextField> percentFields = new ArrayList<>();
     private JPanel panel1;
     private JLabel Heading;
     private JPanel imagePanel;
     private JScrollPane scrollPane;
     private JButton nextButton;
 
-    public userInputFormPart3(List<JTextField> nameFields, List<JTextField> percentFields) {
+    public userInputFormPart3() {
         setTitle("Paste Blackboard Gradebook");
         setContentPane(panel1);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -31,6 +29,8 @@ public class userInputFormPart3 extends JFrame{
         imagePanel.setLayout(new BoxLayout(imagePanel, BoxLayout.Y_AXIS));
 
         String[] images = {"/images/image1.png", "/images/image2.png", "/images/image1.png"};
+
+
 
         for (String path : images) {
             java.net.URL url = getClass().getResource(path);
@@ -54,9 +54,11 @@ public class userInputFormPart3 extends JFrame{
         imagePanel.add(textScroll);
 
         nextButton.addActionListener(e -> {
+            System.out.println(AssignmentData.nameFields.size());
             String input = endTextArea.getText();
-            new userInputFormPart4(nameFields, percentFields, input);
+            new userInputFormPart4(input);
             this.dispose();
+
         });
 
 
